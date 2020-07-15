@@ -1,0 +1,500 @@
+{
+  "intents": [
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "hello"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "thanks",
+      "examples": [
+        {
+          "text": "thnx"
+        },
+        {
+          "text": "Thank u"
+        },
+        {
+          "text": "thnq"
+        },
+        {
+          "text": "thanks a lot"
+        },
+        {
+          "text": "thank you"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "goodbye",
+      "examples": [
+        {
+          "text": "see u later"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "good bye"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "joboption",
+      "examples": [
+        {
+          "text": "Software Development Engineer"
+        },
+        {
+          "text": "Data Analyst"
+        },
+        {
+          "text": "Product Manager"
+        },
+        {
+          "text": "3"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "1"
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "Data scientist"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "joboption",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Data scientist",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Product Manager",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Data analyst",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "1",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Software Development Engineer",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "2",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "3",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "4",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    },
+    "from-sample": true
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Select from the following",
+            "options": [
+              {
+                "label": "Product Manager",
+                "value": {
+                  "input": {
+                    "text": "Product Manager"
+                  }
+                }
+              },
+              {
+                "label": "Data Analyst",
+                "value": {
+                  "input": {
+                    "text": "Data Analyst"
+                  }
+                }
+              },
+              {
+                "label": " Software Development Engineer",
+                "value": {
+                  "input": {
+                    "text": " Software Development Engineer"
+                  }
+                }
+              },
+              {
+                "label": "Data Scientist",
+                "value": {
+                  "input": {
+                    "text": "Data Scientist"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1593067529221",
+      "conditions": "true",
+      "dialog_node": "node_5_1594732662272"
+    },
+    {
+      "type": "standard",
+      "title": "Software Development Engineer",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "3. Software Development Engineer:\nJob Function : Engineer, IT\nEmployment : Full time\nSkills : Good programming skills in C++/ Java / Python\nStrong Knowledge of Data structures and algorithms\nRDBMS/ NoSQLs\nSystem Design/ architecture\nExperience : 0-5 yrs \nEducation : Bachelor's degree"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593065184108",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1593067320483"
+      },
+      "dialog_node": "node_4_1593067252838",
+      "previous_sibling": "node_7_1593066863397"
+    },
+    {
+      "type": "standard",
+      "title": "Data Analyst",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "2. Data analyst:\nJob Function : Data analysis\nEmployment : Full time\nSkills : Advanced SQL skills\nR or Python , \nJupyter notebook, Excel / Sheets , \nKnowledge about Data visualization tools, \ndata management/ analysis, \nAnalytical skills \nExperience : 2-5 yrs \nEducation : Bachelor's degree\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593065184108",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1593067252838"
+      },
+      "dialog_node": "node_7_1593066863397",
+      "previous_sibling": "node_9_1593065191902"
+    },
+    {
+      "type": "standard",
+      "title": "Data scientist:",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "4. Data scientist:\nJob Function : Engineer, IT\nEmployment : Full time\nSkills : Good programming skills in Python, python tools\n Knowledge of Data structures, \nScripting, \nRDBMS, Data science \nML/ deep learning\nExperience : 2-4 yrs \nEducation : Bachelor's degree"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593065184108",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1593067529221"
+      },
+      "dialog_node": "node_9_1593067320483",
+      "previous_sibling": "node_4_1593067252838"
+    },
+    {
+      "type": "standard",
+      "title": "Product Manager",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "1. Product Manager:\nJob Function: Product Management \nEmployment: Full time\nSkills : Product Management, analytical skills, product marketing, customer engagement/ marketing, Resource  planning, customer experience\nExperience : 3- 4 yrs in product management\nEducation :- Bachelor's degree"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1593065184108",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1593066863397"
+      },
+      "dialog_node": "node_9_1593065191902"
+    },
+    {
+      "type": "standard",
+      "title": "Job Descriptions",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We are currently hiring for following posts."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1593065191902"
+      },
+      "dialog_node": "node_5_1593065184108",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "thank you",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Interview dates for further rounds will be intimated to you after your resume submission through email. Thank you. Have a nice day!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "dialog_node": "node_4_1594733502284",
+      "previous_sibling": "node_1_1594733155413"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Apply for your job <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdqLaDtla9GlhKLnaag0VQ5T8jtmSJAhmbEtdBN5VjdQrAbYA/viewform?usp=sf_link\", target=\"_blank\">here</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1594733502284"
+      },
+      "conditions": "@joboption",
+      "dialog_node": "node_1_1594733155413",
+      "previous_sibling": "node_9_1593067529221"
+    },
+    {
+      "type": "standard",
+      "title": "Which post",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which job post are you interested in?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1594732662272"
+      },
+      "dialog_node": "node_9_1593067529221",
+      "previous_sibling": "node_5_1593065184108"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_4_1594733502284",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. Iam HR at Data Avengers."
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1593065184108"
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "AI Recruting skill Datavengers",
+  "language": "en",
+  "description": ""
+}
