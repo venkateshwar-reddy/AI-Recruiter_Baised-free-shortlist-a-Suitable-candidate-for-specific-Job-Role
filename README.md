@@ -21,3 +21,7 @@ https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-gb
 
 <h3>Link to Demonstration Video</h3>
 https://drive.google.com/file/d/1yxleHLJfujVlCmqVNqQgoAJYcTsdy4PK/view?usp=sharing
+
+<h2>Block Diagram</h2>
+<br>
+<img scr="../Screenshots/block_diagram" alt="Block Diagram Image">
