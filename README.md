@@ -24,4 +24,12 @@ https://drive.google.com/file/d/1yxleHLJfujVlCmqVNqQgoAJYcTsdy4PK/view?usp=shari
 
 <h2>Block Diagram</h2>
 <br>
-<img scr="../Screenshots/block_diagram" alt="Block Diagram Image">
+<img src="Screenshots/block_diagram.PNG" alt="Block Diagram Image">
+
+<h2>Screenshots</h2>
+<br>
+<h3> 1. Chatbot Preview</h3>
+<img src="Screenshots/chatbot1.PNG" alt="Preview 1">
+<br>
+<img src="Screenshots/chatbot2.PNG" alt="Preview 2">
+<br>
