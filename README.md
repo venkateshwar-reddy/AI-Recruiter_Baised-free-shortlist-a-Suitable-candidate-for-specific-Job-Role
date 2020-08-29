@@ -23,13 +23,26 @@ https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-gb
 https://drive.google.com/file/d/1yxleHLJfujVlCmqVNqQgoAJYcTsdy4PK/view?usp=sharing
 
 <h2>Block Diagram</h2>
-<br>
 <img src="Screenshots/block_diagram.PNG" alt="Block Diagram Image">
-
-<h2>Screenshots</h2>
-<br>
+<br><br>
+<h2>Screenshots And Results</h2>
 <h3> 1. Chatbot Preview</h3>
 <img src="Screenshots/chatbot1.PNG" alt="Preview 1">
 <br>
 <img src="Screenshots/chatbot2.PNG" alt="Preview 2">
+<br>
+<h3> 2. Form For Collecting Resumes And Other Information</h3>
+<img src="Screenshots/form.PNG" alt="Form">
+<br>
+<h3> 3. Graph After Parsing Candidates Resumes</h3>
+<img src="Screenshots/graph_score.PNG" alt="Graph">
+<br>
+<h3> 4. CSV File After Computing Scores</h3>
+<img src="Screenshots/csv_score.PNG" alt="CSV File">
+<br>
+<h3> 5. Re-ranking Algorithms Comparision</h3>
+<img src="Screenshots/reranking.PNG" alt="Re-ranking graph">
+<br>
+<h3> 6. E-mail To Top Candidates</h3>
+<img src="Screenshots/email.PNG" alt="Eamail">
 <br>
